@@ -1,12 +1,12 @@
 ---
 name: Demo Apps
 description: |-
-  **BolometerSim** solves the thermo-electric problem of an
+  **BolometerSIM** solves the thermo-electric problem of an
   infra-red bolometer device. Incident radiation causes a temperature rise in a
   thermally insulated conducting absorber mounted on an insulating dielectric
   heat sink.
 
-  **EMMirrorSim** calculates the reflectance of a dielectric
+  **EMMirrorSIM** calculates the reflectance of a dielectric
   mirror consisting of a number of identical dielectric bi-layers with high and
   low refractive indices.
 
