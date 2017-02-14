@@ -1,4 +1,5 @@
 title: 'Demo Apps'
+connection: 'template/bc_comsol_server/connection.html.mustache'
 shared:
   - name: 'Demo Apps'
     batch: 'quick'
@@ -9,6 +10,6 @@ shared:
     webserver?: true
     pbs:
       envvars:
-        COMSOL_MODULE: 'comsol/52a_server'
+        COMSOL_MODULE: 'comsol/52au3_server'
         COMSOL_APP_TOKEN: 'awesim_altasim_demo'
         COMSOL_APP_ROOT: '/users/PZS0645/wiag/comsol/applications/altasim/demo'
