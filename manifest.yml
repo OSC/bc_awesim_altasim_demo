@@ -1,29 +1,35 @@
 ---
 name: Demo Apps
-description: |-
-  **BolometerSIM** solves the thermo-electric problem of an
-  infra-red bolometer device. Incident radiation causes a temperature rise in a
-  thermally insulated conducting absorber mounted on an insulating dielectric
-  heat sink.
-
-  **EMMirrorSIM** calculates the reflectance of a dielectric
-  mirror consisting of a number of identical dielectric bi-layers with high and
-  low refractive indices.
-
-  **MieSIM** solves Maxwell's equations for scattering of
-  electromagnetic radiation by spherical dielectric particles and provides the
-  basis for measuring the size of particles in the atmosphere, oil droplet in
-  water, and cell nuclei in biological systems.
-
-  **PeltierSIM** simulates the thermo-electric behavior for the
-  conversion of heat into electricity or electricity into heat and is described
-  by three related mechanisms: the Seebeck, Peltier and Thomson effects.
-
-  **SPRSIM** simulates the behavior of surface plasmons propagating at
-  the interface between two materials for the two commonly used configurations
-  for plasmon excitation: the Kretschmann-Raether and Otto configurations.
-
-  **&mu;WaveSIM** solves the heat transfer problem associated with
-  an electromagnetic field inside a cavity containing a single waveguide.
 category: AltaSim Technologies
-url: /pun/sys/vncsim/%{app_token}/sessions
+role: batch_connect
+description: |
+  This app will launch [COMSOL Server] 5.2a Update 3 on the [Oakley Cluster]
+  with access to the following [AltaSim] apps:
+
+  **BolometerSIM** solves the thermo-electric problem of an infra-red bolometer
+  device. Incident radiation causes a temperature rise in a thermally insulated
+  conducting absorber mounted on an insulating dielectric heat sink.
+
+  **EMMirrorSIM** calculates the reflectance of a dielectric mirror consisting
+  of a number of identical dielectric bi-layers with high and low refractive
+  indices.
+
+  **MieSIM** solves Maxwell's equations for scattering of electromagnetic
+  radiation by spherical dielectric particles and provides the basis for
+  measuring the size of particles in the atmosphere, oil droplet in water, and
+  cell nuclei in biological systems.
+
+  **PeltierSIM** simulates the thermo-electric behavior for the conversion of
+  heat into electricity or electricity into heat and is described by three
+  related mechanisms: the Seebeck, Peltier and Thomson effects.
+
+  **SPRSIM** simulates the behavior of surface plasmons propagating at the
+  interface between two materials for the two commonly used configurations for
+  plasmon excitation: the Kretschmann-Raether and Otto configurations.
+
+  **&mu;WaveSIM** solves the heat transfer problem associated with an
+  electromagnetic field inside a cavity containing a single waveguide.
+
+  [COMSOL Server]: https://www.comsol.com/comsol-server
+  [Oakley Cluster]: https://www.osc.edu/resources/technical_support/supercomputers/oakley
+  [AltaSim]: http://www.altasimtechnologies.com/

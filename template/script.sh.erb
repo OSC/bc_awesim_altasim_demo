@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+<%-
+  app_root = Pathname.new("/users/PZS0645/wiag/comsol/applications/altasim/demo")
+
+  server_prefs = {
+    "server.general.showbuiltinapplications" => "off",
+    "application.server.enable" => "off",
+    "application.server.allowexternalprocess" => "on"
+  }
+-%>
+
+# Load the required environment
+setup_env () {
+  module purge
+  module load comsol/52au3_server
+}
+setup_env
+
+#
+# Start COMSOL Server
+#
+
+<%- prefs_dir = Pathname.new(ENV["HOME"]).join(".comsol", "awesim_altasim_demo") -%>
+mkdir -p "<%= prefs_dir %>"
+
+# Copy over default server preferences if it does not exist
+<%- server_prefs_file = prefs_dir.join("server.prefs") -%>
+touch "<%= server_prefs_file %>"
+echo "Setting server preferences..."
+set -x
+sed 's/^ \{2\}//' > "<%= server_prefs_file %>" << EOL
+<%- server_prefs.each do |k, v| -%>
+  <%= k %>=<%= v %>
+<%- end -%>
+EOL
+{ set +x; } 2>/dev/null
+
+# Copy over COMSOL Server apps
+<%- apps_dir = prefs_dir.join("applications") -%>
+mkdir -p "<%= apps_dir %>"
+set -x
+ln -s "<%= app_root %>/"*.mph{,app} "<%= apps_dir %>"
+symlinks -d "<%= apps_dir %>"
+{ set +x; } 2>/dev/null
+
+# For debugging purposes output license server information
+echo "Output license information..."
+set -x
+lmutil lmstat -a
+{ set +x; } 2>/dev/null
+
+# Set working directory to home directory
+cd "${HOME}"
+
+# Launch COMSOL Server
+# NB: use -silent or the server will suspend itself
+echo "Starting up COMSOL Server..."
+set -x
+comsol server \
+  -serviceport ${port} \
+  -prefsdir "<%= prefs_dir %>" \
+  -silent \
+  -login never
