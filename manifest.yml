@@ -3,8 +3,7 @@ name: Demo Apps
 category: AltaSim Technologies
 role: batch_connect
 description: |
-  This app will launch [COMSOL Server] 5.2a Update 3 on the [Oakley Cluster]
-  with access to the following [AltaSim] apps:
+  This app provides the following [AltaSim] apps:
 
   **BolometerSIM** solves the thermo-electric problem of an infra-red bolometer
   device. Incident radiation causes a temperature rise in a thermally insulated
