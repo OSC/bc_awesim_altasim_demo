@@ -3,8 +3,8 @@
 ![GitHub Release](https://img.shields.io/github/release/osc/bc_awesim_altasim_demo.svg)
 [![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-An interactive app designed for AweSim that launches a COMSOL Server
-with access to AltaSim's Demo Apps within an Oakley batch job.
+An interactive app designed for AweSim that launches a COMSOL Server with
+access to AltaSim's Demo Apps within an Owens batch job.
 
 ## Prerequisites
 
